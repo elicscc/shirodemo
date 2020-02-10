@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:shiro="http://www.thymeleaf.org/thymeleaf-extras-shiro">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+</head>
+<body>
+<font color="red" th:text="${msg}"></font><br>
+<div th:if="${session.loginUser==null}">
+<form action="/login" method="post">
+用户名：<input type="text" name="username"><br>
+密码：<input type="text" name="password"><br>
+    <input type="submit" value="登录">
+</form></div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- namespace：当前XML文件用于配置哪个接口中抽象方法对应的SQL语句 -->
+<mapper namespace="com.example.shirodemo.mapper.UserMapper">
+
+<select id="findByName" parameterType="String"  resultType="User">
+SELECT id ,username,password,perms
+FROM user
+WHERE username=#{username}
+
+
+
+</select>
+
+<select id="findById" parameterType="String"  resultType="User">
+SELECT id ,username,password,perms
+FROM user
+WHERE id=#{id}
+
+
+
+</select>
+
+</mapper>
